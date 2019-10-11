@@ -10,14 +10,12 @@ const orderSchema = new mongoose.Schema({
     required: true
   },
   toppings: {
-    type: String,
-    required: true
+    type: String
   },
-  // could just write firstPublished: Number,
   datePurchased: {
     type: Number
   },
-  originalLanguage: {
+  location: {
     type: String
   },
   owner: {
