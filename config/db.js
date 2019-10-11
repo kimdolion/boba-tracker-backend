@@ -1,7 +1,7 @@
 'use strict'
 
 // creating a base name for the mongodb
-const mongooseBaseName = 'boba-tracker-client'
+const mongooseBaseName = 'boba-tracker-backend'
 
 // create the mongodb uri for development and test
 const database = {
