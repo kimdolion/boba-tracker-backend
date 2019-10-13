@@ -11,7 +11,10 @@ curl "${API}${URL_PATH}" \
   --data '{
     "order": {
       "title": "'"${TITLE}"'",
-      "flavor": "'"${FLAVOR}"'"
+      "flavor": "'"${FLAVOR}"'",
+      "toppings": "'"${TOPPINGS}"'",
+      "datePurchased": "'"${DATE}"'",
+      "location": "'"${LOCATION}"'"
     }
   }'
 
