@@ -14,7 +14,8 @@ curl "${API}${URL_PATH}" \
       "flavor": "'"${FLAVOR}"'",
       "toppings": "'"${TOPPINGS}"'",
       "datePurchased": "'"${DATE}"'",
-      "location": "'"${LOCATION}"'"
+      "location": "'"${LOCATION}"'",
+      "cost": "'"${COST}"'"
     }
   }'
 

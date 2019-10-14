@@ -13,10 +13,18 @@ const orderSchema = new mongoose.Schema({
     type: String
   },
   datePurchased: {
-    type: Number
+    type: Date,
+    default: Date.now
   },
   location: {
-    type: String
+    street: String,
+    city: String,
+    state: String,
+    zipCode: Number,
+    country: String
+  },
+  cost: {
+    type: Number
   },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
