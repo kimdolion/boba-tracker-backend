@@ -17,6 +17,9 @@ const orderSchema = new mongoose.Schema({
     min: 0,
     default: 3
   },
+  color: {
+    type: String
+  },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
