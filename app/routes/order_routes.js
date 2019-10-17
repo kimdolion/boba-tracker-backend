@@ -27,10 +27,11 @@ const requireToken = passport.authenticate('bearer', { session: false })
 // instantiate a router (mini app that only handles routes)
 const router = express.Router()
 
-// INDEX
+// INDEX ALL ORDERS with OWNERS
 // GET /orders
 router.get('/orders', requireToken, (req, res, next) => {
   Order.find()
+    .populate('owner')
     .then(orders => {
       // `orders` will be an array of Mongoose documents
       // we want to convert each one to a POJO, so we use `.map` to
@@ -48,6 +49,7 @@ router.get('/orders', requireToken, (req, res, next) => {
 router.get('/orders/:id', requireToken, (req, res, next) => {
   // req.params.id will be set based on the `:id` in the route
   Order.findById(req.params.id)
+    .populate('owner')
     .then(handle404)
     // if `findById` is succesful, respond with 200 and "order" JSON
     .then(order => res.status(200).json({ order: order.toObject() }))
@@ -87,10 +89,12 @@ router.patch('/orders/:id', requireToken, removeBlanks, (req, res, next) => {
       requireOwnership(req, order)
 
       // pass the result of Mongoose's `.update` to the next `.then`
-      return order.updateOne(req.body.order)
+      return order.set(req.body.order).save()
     })
     // if that succeeded, return 204 and no JSON
-    .then(() => res.sendStatus(204))
+    .then(order => {
+      res.status(200).json({order: order})
+    })
     // if an error occurs, pass it to the handler
     .catch(next)
 })

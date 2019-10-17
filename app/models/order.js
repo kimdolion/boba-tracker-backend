@@ -1,30 +1,21 @@
 const mongoose = require('mongoose')
 
 const orderSchema = new mongoose.Schema({
-  title: {
-    type: String,
-    required: true
-  },
   flavor: {
     type: String,
     required: true
-  },
-  toppings: {
-    type: String
   },
   datePurchased: {
     type: Date,
     default: Date.now
   },
   location: {
-    street: String,
-    city: String,
-    state: String,
-    zipCode: Number,
-    country: String
+    type: String
   },
   cost: {
-    type: Number
+    type: Number,
+    min: 0,
+    default: 3
   },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
