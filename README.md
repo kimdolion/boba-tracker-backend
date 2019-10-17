@@ -12,6 +12,11 @@ Keep track of your bubble tea purchases so you can remember what you liked and s
 ## Technologies Used
 React, React Boostrap, Axios, MongoDB, Express, HTML, CSS, JS
 
+## Setup and Installation
+Change information, where need be, with proper project name.
+   - `config/db.js` contains mongoose database name
+   - `npm install` to install proper dependencies
+
 **User** has many **Orders**
 
   <table style="display:inline">
