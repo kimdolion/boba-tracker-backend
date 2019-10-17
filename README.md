@@ -1,5 +1,5 @@
 # Boba Tracker
-Keep track of your bubble tea purchases so you can remember what you liked and calculate what you've spent.
+Keep track of your bubble tea purchases so you can remember what you liked and see what others have ordered.
 
 [Front-end Client](https://kimdolion.github.io/boba-tracker-client/#/)
 
@@ -10,7 +10,7 @@ Keep track of your bubble tea purchases so you can remember what you liked and c
 [Black-end Repo](https://github.com/kimdolion/boba-tracker-backend)
 
 ## Technologies Used
-HTML, CSS, JavaScript, React, React Boostrap, Axios, React, Express
+React, React Boostrap, Axios, MongoDB, Express, HTML, CSS, JS
 
 **User** has many **Orders**
 
@@ -97,6 +97,12 @@ HTML, CSS, JavaScript, React, React Boostrap, Axios, React, Express
 
 ## Development Process
 Planning the project
+I honestly started planning this out as soon as we were done with our tic tac toe game.
+
+I love bubble tea also known as boba, which is a reference to the often ordered tapioca pearls that sit in the bottom of the cup.
+That being said, I don't always have the best memory of what/where I have ordered this wonderful drink. It's especially frustrating when I can't easily get a hold of my friends who have gone to various shops and ordered any number of drinks.
+
+I wanted to track what I ordered as well as see what my friends might be fans of so I could order it for myself.
 
 ## Problem Solving
 ### Launching the backend
@@ -118,5 +124,7 @@ I'm realizing it is a lot more complicated of a model and I need to also balance
 
 ## Stretch Goals
 Implement the location model and/or integrate a maps api to better help users locate the bubble tea shops so that they are able to actually replicate an order.
+
+Include options to sort by location and track likes on orders.
 
 ## Additional Resources
