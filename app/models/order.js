@@ -5,6 +5,9 @@ const orderSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  toppings: {
+    type: Array
+  },
   datePurchased: {
     type: Date,
     default: Date.now
